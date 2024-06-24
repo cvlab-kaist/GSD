@@ -59,7 +59,7 @@
     <div class="container" id="header" style="text-align: center; margin: auto;">
         <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
             <h2 class="col-md-12 text-center" id="title">
-                <b>GenWarp</b>: Single Image to Novel Views with <br>Semantic-Preserving Generative Warping<br>
+                <b>GSD</b>: Geometry-Aware Score Distillation via  <br> 3D Consistent Noising and Gradient Consistency Modeling <br>
                 <small>
                     Arxiv 2024
                 </small>
@@ -67,60 +67,40 @@
         </div>
         <div class="row" id="author-row" style="margin:0 auto;">
             <div class="col-md-12 text-center" style="display: table; margin:0 auto">
-                <a style="text-decoration:none" href="https://j0seo.github.io/">
-                    Junyoung&nbsp;Seo*<sup>,1,3</sup>
+                <a style="text-decoration:none" href="https://mskwak01.github.io/">
+                    Min-Seop&nbsp;Kwak*<sup>,1</sup>
                 </a>
                 <span style="padding-left: 20px;"></span>
-                Kazumi Fukuda<sup>1</sup>
+                Donghoon Ahn<sup>1</sup>
                 <span style="padding-left: 20px;"></span>
                 <!-- <a style="text-decoration:none" href="https://scholar.google.com/citations?user=XCRO260AAAAJ"> -->
-                    Takashi Shibuya<sup>1</sup>
-                <!-- </a> -->
-                <span style="padding-left: 20px;"></span>
-                <!-- <a style="text-decoration:none" href="https://scholar.google.com/citations?user=D3h3NxwAAAAJ&hl=en"> -->
-                    Takuya Narihira<sup>1</sup>
+                    Ines Hyeonsu Kim<sup>1</sup>
                 <!-- </a> -->
                 <br>
                 <span style="padding-left: 20px;"></span>
                 <!-- <a style="text-decoration:none" href="https://scholar.google.com/citations?user=oyuTmwoAAAAJ"> -->
-                    Naoki Murata<sup>1</sup>
+                    Jin-Hwa Kim<sup>†,2,3</sup>
                 <!-- </a> -->
                 
                 <span style="padding-left: 20px;"></span>
                 <a style="text-decoration:none" href="https://skhu101.github.io">
-                    Shoukang Hu<sup>1</sup>
-                </a>
-                
-                <span style="padding-left: 20px;"></span>
-                <a style="text-decoration:none" href="https://chiehhsinjesselai.github.io">
-                    Chieh-Hsin Lai<sup>1</sup>
-                </a>
-                <br>
-                <span style="padding-left: 20px;"></span>
-                <a style="text-decoration:none" href="https://cvlab.korea.ac.kr">
-                    Seungryong&nbsp;Kim<sup>†,3</sup>
-                </a>
-                <span style="padding-left: 20px;"></span>
-                <a style="text-decoration:none" href="https://www.yukimitsufuji.com">
-                    Yuki Mitsufuji<sup>†,1,2</sup>
+                    Seungryong Kim<sup>†,1</sup>
                 </a>
                 <br>
                 <table class="author-table" id="author-table">
                     <tr>
                         <td>
-                            <sup>1</sup>Sony AI
+                            <sup>1</sup>Korea University
                         </td>
                         <td>
-                            <sup>2</sup>Sony Group Corporation
+                            <sup>2</sup>NAVER AI Lab
                         </td>
                         <td>
-                            <sup>3</sup>Korea University
+                            <sup>3</sup>AI Institute of Seoul National University
                         </td>
                     </tr>
                 </table>
                 <small>
-                    <br>
-                    *Work done during an internship at Sony AI.<br>
                     <sup>†</sup>Co-corresponding authors.
                 </small>
             </div>
@@ -154,11 +134,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="text-center">
-                    <img src="./img/qual_1.png" width="100%">
+                    <img src="./img/teaser.pdf" width="100%">
                 </div>
 
                 <div class="text-justify">
-                    Our model generates plausible novel views, conditioned on <b>only a single input view</b>, enabling to handle both in-domain images (top) and out-of-domain images (bottom).
+                    Our framework incorporates 3D awareness into the score distillation sampling (SDS) process through a 3D consistent noising, which induces consistency of the predicted 2D score. As a general plug-and-play module that can be attached to any SDS-based text-to-3D generation baselines with little computation cost, it brings about highly enhanced view consistency and fidelity to 3D generation results across various baselines.
                 </div>
             </div>
         </div>

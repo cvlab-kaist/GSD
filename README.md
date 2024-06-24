@@ -1,2 +1,6 @@
 # GSD
-Geometry-Aware Score Distillation via 3D Consistent Noising and Gradient Consistency Modeling
+
+Code will be uploaded soon.
+
+Please check out our [project page](https://ku-cvlab.github.io/GSD/).
+

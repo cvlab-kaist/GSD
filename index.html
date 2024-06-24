@@ -237,11 +237,8 @@
                     <b>Overall Framework</b>
                 </h4>
                 <div class="text-justify">
-                    Given an input view and a desired camera viewpoint, we obtain a pair of embeddings: a 2D coordinate embedding for the input view, 
-                    and a <i>warped</i> coordinate embedding for the novel view.
-                    With these embeddings, a semantic preserver network produces a semantic feature of the input view, 
-                    and a diffusion model conditioned on them learns to conduct geometric warping 
-                    to generate novel views.
+                    Our framework consists of three components for geometry-aware score distillation: 3D consistent noising, geometry-based gradient warping, and gradient consistency modeling.
+                    Through these components, our framework encourages multiview consistency between predicted 2D scores and enhances the quality of generated 3D scenes.
                 </div>
                 <br>
 
@@ -259,8 +256,22 @@
                 <div style="width: 90%;">
                     <!-- <img src="img/motivation_1.png" style="float: right; width: 40%; height: auto; margin-left: 20px;"> -->
                     <div class="text-justify">
-                        Generating novel views from a single image remains a challenging task due to the complexity of 3D scenes and the limited diversity in the existing multi-view datasets to train a model on. Recent research combining large-scale text-to-image (T2I) models with monocular depth estimation (MDE) has shown promise in handling in-the-wild images. In these methods, an input view is geometrically warped to novel views with estimated depth maps, then the warped image is inpainted by T2I models. However, they struggle with noisy depth maps and loss of semantic details when warping an input view to novel viewpoints. In this paper, we propose a novel approach for single-shot novel view synthesis, a semantic-preserving generative warping framework that enables T2I generative models to learn where to warp and where to generate, through augmenting crossview attention with self-attention. Our approach addresses the limitations of existing methods by conditioning the generative model on source view images and incorporating geometric warping signals. Qualitative and quantitative evaluations demonstrate that our model outperforms existing methods in both in-domain and out-of-domain scenarios.
-                    </div>
+                        Score distillation sampling (SDS), the methodology in which the score 
+                        from pretrained 2D diffusion models is distilled into 3D representation, 
+                        has recently brought significant advancements in text-to-3D generation task. 
+                        However, this approach is still confronted with critical geometric 
+                        inconsistency problems such as the Janus problem. 
+                        Starting from a hypothesis that such inconsistency problems may be induced by multiview 
+                        inconsistencies between 2D scores predicted from various viewpoints, 
+                        we introduce <b>GSD</b>, a simple and general plug-and-play framework 
+                        for incorporating 3D consistency and therefore geometry awareness into the SDS process. 
+                        Our methodology is composed of three components: 3D consistent noising, 
+                        designed to produce 3D consistent noise maps that perfectly follow the standard Gaussian distribution, 
+                        geometry-based gradient warping for identifying correspondences between predicted gradients of different viewpoints, 
+                        and novel gradient consistency loss to optimize the scene geometry toward producing more consistent gradients. 
+                        We demonstrate that our method significantly improves performance, successfully addressing the geometric inconsistency problems 
+                        in text-to-3D generation task with minimal computation cost and being compatible with existing score distillation-based models.
+                        </div>
                 </div>
                 
                 <br>

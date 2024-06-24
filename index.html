@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="text-justify">
-                    Our framework incorporates 3D awareness into the score distillation sampling (SDS) process through a 3D consistent noising, which induces consistency of the predicted 2D score. As a general plug-and-play module that can be attached to any SDS-based text-to-3D generation baselines with little computation cost, it brings about highly enhanced view consistency and fidelity to 3D generation results across various baselines.
+                    Our framework incorporates 3D awareness into the score distillation sampling (SDS) process through a 3D consistent noising, which induces consistency of the predicted 2D score. As a general plug-and-play module that can be attached to SDS-based text-to-3D generation baselines with little computation cost, it brings about highly enhanced view consistency and fidelity to 3D generation results across various baselines.
                 </div>
             </div>
         </div>
@@ -149,8 +149,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2"  style="margin-bottom: 5px;">
                 <h4>
-                    <b>Application: Single Image to 3DGS</b>
+                    <b>3D Consistent Integral Noising</b>
                 </h4>
+                <div class="text-center">
+                    <img src="./img/noising.png" width="100%">
+                </div>
                 Our model can be applied to various downstream tasks. For example, given a single image, our model generates 3-4 novel view images, followed by feeding them into fast 3DGS reconstructors such as <a href="https://instantsplat.github.io">InstantSplat</a>. Then we can easily obtain a 3DGS scene <b>in 30 seconds</b>.
                 <br>
                 <div class="text-center">

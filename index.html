@@ -192,44 +192,21 @@
 
         <br>
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2"  style="margin-bottom: 5px;">
                 <h4>
-                    <b>Warping-and-Inpainting vs. Ours</b>
+                    <b>3D Consistency Enhancement Results</b>
                 </h4>
-                    <p class="text-justify">
-                        <!-- The warping-and-inpainting approach successfully generates novel views from in-the-wild images by utilizing large capabilities of large-scale T2I diffusion models. Despite such an advantage, <b>(1)</b> it struggle to handle noisy depth maps predicted by the MDE, 
-                        and <b>(2)</b> important semantic details of the input view sometimes get lost during geometric warping.
-                        <br> -->
-                        We introduce a novel approach where a diffusion model <b>learns to implicitly conduct geometric warping</b> conditioned on MDE depth-based correspondence, instead of warping the pixels or the features directly. We design the model to interactively compensate for the ill-warped regions during its generation process, thereby <b>preventing artifacts typically caused by explicit warping</b>.
-                    </p>
-                    <div class="text-center">
-                        <!-- <video id="ide" width="80%" playsinline autoplay loop muted>
-                            <source src="video/web_fig1_short.mp4" type="video/mp4" />
-                        </video> -->
-                        <img src="./img/concept.jpg" width="85%">
-                    </div>
+                <div class="text-center">
+                <video id="ide" width="100%" playsinline autoplay loop muted controls style="margin-top: 10px;">
+                    <source src="video/3Dgen_video.mp4" type="video/mp4" />
+                </div>
+                <br>
+                The incorporation of our GSD framework drastically enhances the geometric 3D consistency of generated scenes.
+                <br>
+            </video>
             </div>
-        </div>
-        <br>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h4>
-                    <b>GenWarp Knows Where to <i>Warp</i> and Where to <i>Refine</i>  </b>
-                </h4>
-                    <p class="text-justify">
-                        In our augmented self-attention, the original self-attention part is more attentive to regions requiring generative priors, such as occluded or ill-warped areas (top), while the cross-view attention part focuses on regions that can be reliably warped from the input view (bottom). By aggregating both attentions at once, the model naturally <b>determines which regions to generate and which to warp.</b></p>
-                    <div class="text-center">
-                        <!-- <video id="ide" width="80%" playsinline autoplay loop muted>
-                            <source src="video/web_fig1_short.mp4" type="video/mp4" />
-                        </video> -->
-                        <img src="./img/vis.png" width="85%">
-                    </div>
-            </div>
-        </div>
-        <br>
-
+        </div> -->
 
         <br>
 
@@ -247,7 +224,6 @@
         </div>
 
         <br>
-
 
 
         <div class="row">

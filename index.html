@@ -154,7 +154,7 @@
                 <div class="text-center">
                     <img src="./img/noising.png" width="100%">
                 </div>
-                Our model can be applied to various downstream tasks. For example, given a single image, our model generates 3-4 novel view images, followed by feeding them into fast 3DGS reconstructors such as <a href="https://instantsplat.github.io">InstantSplat</a>. Then we can easily obtain a 3DGS scene <b>in 30 seconds</b>.
+                To produce a 3D geometry-aware 2D noise map that preserves the Gaussian properties of the standard normal distribution, we conduct 3D conditional upsampling of point clouds along with discrete integral of projected noise values.</b>.
                 <br>
                 <div class="text-center">
                 <video id="ide" width="70%" playsinline autoplay loop muted controls style="margin-top: 10px;">
@@ -246,7 +246,7 @@
                 <br>
 
                 <div class="text-center">
-                    <img src="./img/arch.png" width="85%">
+                    <img src="./img/framework.png" width="85%">
                 </div>
             </div>
         </div>
@@ -276,9 +276,10 @@
                     </h4>
                     <div class="form-group col-md-10 col-md-offset-1">
                         <textarea id="bibtex" class="form-control" readonly>
-@article{seo2024genwarp,
-  title={GenWarp: Single Image to Novel Views with Semantic-Preserving Generative Warping},
-  author={Seo, Junyoung and Fukuda, Kazumi and Shibuya, Takashi and Narihira, Takuya and Murata, Naoki and Hu, Shoukang and Lai, Chieh-Hsin and Kim, Seungryong and Mitsufuji, Yuki},
+
+@article{kwak2024gsd,
+  title={GSD: Geometry-Aware Score Distillation via 3D Consistent Noising and Gradient Consistency Modeling},
+  author={Kwak, Min-Seop and Ahn, Donghoon and Kim, Ines Hyeonsu and Kim, Jin-Hwa and Kim, Seungryong},
   journal={arXiv preprint arXiv:2405.17251},
   year={2024}
 }
@@ -286,7 +287,7 @@
                     </div>
                 </div>
             </div>
-
+<!-- 
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h4>
@@ -296,7 +297,7 @@
                         We thank <a href="https://github.com/ONground-Korea">Jisang Han</a> for helping with the 3DGS application in this project page. The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
                     </p>
                 </div>
-            </div>
+            </div> -->
         </div>
 
 
